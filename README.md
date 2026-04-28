@@ -1,10 +1,10 @@
-# 🤖 Bhavya Dashottar - Object Detection + Distance Estimation for Robotics Navigation
+# Bhavya Dashottar - Object Detection + Distance Estimation for Robotics Navigation
 
 A complete pipeline for detecting navigation-relevant objects (cones, barriers, stop signs) and estimating their real-world distance from a camera using geometry-based methods. Optimized for edge deployment.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 robotics_nav/
@@ -31,7 +31,7 @@ robotics_nav/
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 ### 1. Clone & Install
 
@@ -68,7 +68,7 @@ Edit `configs/config.yaml` to set your dataset path and camera intrinsics.
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### Train
 ```bash
@@ -127,16 +127,16 @@ Camera intrinsics (focal length) can be calibrated or approximated from EXIF/dat
 
 ---
 
-## 🎯 Extra Credit Implemented
+## Extra Credit Implemented
 
-- ✅ Geometry-based distance (focal length + known object height)
-- ✅ Bird's-eye view via Homography/Perspective Transform
-- ✅ Optical Flow for cone tracking across frames
-- ✅ Quantization (INT8) and structured pruning comparison
+- Geometry-based distance (focal length + known object height)
+- Bird's-eye view via Homography/Perspective Transform
+- Optical Flow for cone tracking across frames
+- Quantization (INT8) and structured pruning comparison
 
 ---
 
-## 📤 Submission
+## Submission
 
 1. Ensure all code is committed:
    ```bash
