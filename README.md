@@ -27,13 +27,6 @@ robotics_nav/
 └── results/
 ```
 
-## Setup
-
-```bash
-git clone <your-repo-url>
-cd robotics_nav
-pip install -r requirements.txt
-```
 
 Download BDD100K from Kaggle and place it as:
 
