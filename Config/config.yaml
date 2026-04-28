@@ -1,0 +1,77 @@
+camera:
+  focal_length_px: 800.0
+  image_height: 720
+  image_width: 1280
+  known_heights_m:
+    barrier: 1.0
+    stop sign: 0.75
+    traffic cone: 0.75
+dataset:
+  images_train: /Users/krishnadashottar/Desktop/assignment/robotics_nav/data/bdd100k/archive/bdd100k/bdd100k/images/100k/train
+  images_val: /Users/krishnadashottar/Desktop/assignment/robotics_nav/data/bdd100k/archive/bdd100k/bdd100k/images/100k/val
+  labels_json_train: /Users/krishnadashottar/Desktop/assignment/robotics_nav/data/bdd100k/archive/bdd100k_labels_release/bdd100k/labels/bdd100k_labels_images_train.json
+  labels_json_val: /Users/krishnadashottar/Desktop/assignment/robotics_nav/data/bdd100k/archive/bdd100k_labels_release/bdd100k/labels/bdd100k_labels_images_val.json
+  labels_train: /Users/krishnadashottar/Desktop/assignment/robotics_nav/data/bdd100k/archive/bdd100k/yolo_labels/train
+  labels_val: /Users/krishnadashottar/Desktop/assignment/robotics_nav/data/bdd100k/archive/bdd100k/yolo_labels/val
+  root: /Users/krishnadashottar/Desktop/assignment/robotics_nav/data/bdd100k/archive/bdd100k
+  target_classes:
+  - traffic cone
+  - barrier
+  - stop sign
+  yaml_path: configs/bdd100k_nav.yaml
+extras:
+  bev_dst_points:
+  - - 200
+    - 720
+  - - 200
+    - 0
+  - - 1000
+    - 0
+  - - 1000
+    - 720
+  bev_src_points:
+  - - 100
+    - 720
+  - - 540
+    - 450
+  - - 740
+    - 450
+  - - 1180
+    - 720
+  bird_eye_view: true
+  optical_flow: true
+inference:
+  conf_threshold: 0.35
+  iou_threshold: 0.45
+  max_det: 100
+  results_dir: results
+  save_results: true
+model:
+  architecture: yolov8n
+  output_dir: runs
+  pretrained: true
+  weights: yolov8n.pt
+optimization:
+  pruning:
+    amount: 0.3
+    enabled: true
+    method: l1_unstructured
+  quantization:
+    enabled: true
+    export_onnx: true
+    format: int8
+    onnx_path: runs/model_int8.onnx
+training:
+  augment: true
+  batch_size: 8
+  cache: false
+  device: mps
+  epochs: 10
+  imgsz: 416
+  lr0: 0.01
+  lrf: 0.01
+  momentum: 0.937
+  patience: 10
+  warmup_epochs: 3
+  weight_decay: 0.0005
+  workers: 2

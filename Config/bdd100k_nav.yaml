@@ -1,0 +1,8 @@
+names:
+- traffic cone
+- barrier
+- stop sign
+nc: 3
+path: /
+train: /Users/krishnadashottar/Desktop/assignment/robotics_nav/data/bdd100k/archive/bdd100k/bdd100k/images/100k/train
+val: /Users/krishnadashottar/Desktop/assignment/robotics_nav/data/bdd100k/archive/bdd100k/bdd100k/images/100k/val
