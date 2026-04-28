@@ -3,6 +3,8 @@
 A pipeline for detecting navigation-relevant objects (cones, barriers, stop signs) and estimating their real-world distance using geometry-based methods.
 
 ## Project Structure
+
+```
 robotics_nav/
 ├── README.md
 ├── requirements.txt
@@ -23,6 +25,7 @@ robotics_nav/
 ├── notebooks/
 │   └── exploration.ipynb
 └── results/
+```
 
 ## Setup
 
@@ -33,9 +36,12 @@ pip install -r requirements.txt
 ```
 
 Download BDD100K from Kaggle and place it as:
+
+```
 data/bdd100k/
 ├── images/train/ & val/
 └── labels/train/ & val/
+```
 
 ## Usage
 
@@ -53,7 +59,10 @@ python scripts/benchmark.py --weights runs/best.pt
 ## Distance Estimation
 
 Uses the pinhole camera model:
+
+```
 Distance = (Real Object Height × Focal Length) / Pixel Height
+```
 
 | Object | Real Height |
 |--------|-------------|
@@ -66,5 +75,4 @@ Distance = (Real Object Height × Focal Length) / Pixel Height
 ## Contact
 
 **Bhavya Dashottar**  
-7976047375
 bhavyadashottar18@gmail.com
