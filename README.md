@@ -1,7 +1,8 @@
 # Bhavya Dashottar — Object Detection + Distance Estimation for Robotics Navigation
+
 A pipeline for detecting navigation-relevant objects (cones, barriers, stop signs) and estimating their real-world distance using geometry-based methods.
 
-Project Structure
+## Project Structure
 robotics_nav/
 ├── README.md
 ├── requirements.txt
@@ -23,17 +24,23 @@ robotics_nav/
 │   └── exploration.ipynb
 └── results/
 
-Setup
-bashgit clone <your-repo-url>
+## Setup
+
+```bash
+git clone <your-repo-url>
 cd robotics_nav
 pip install -r requirements.txt
+```
+
 Download BDD100K from Kaggle and place it as:
 data/bdd100k/
 ├── images/train/ & val/
 └── labels/train/ & val/
 
-Usage
-bash# Train
+## Usage
+
+```bash
+# Train
 python scripts/train.py --config configs/config.yaml
 
 # Demo on image or video
@@ -41,10 +48,23 @@ python scripts/demo.py --source path/to/file --weights runs/best.pt
 
 # Benchmark
 python scripts/benchmark.py --weights runs/best.pt
+```
 
-Distance Estimation
+## Distance Estimation
+
 Uses the pinhole camera model:
 Distance = (Real Object Height × Focal Length) / Pixel Height
-ObjectReal HeightTraffic Cone0.75 mStop Sign0.75 mBarrier1.0 m
 
-Contact
+| Object | Real Height |
+|--------|-------------|
+| Traffic Cone | 0.75 m |
+| Stop Sign | 0.75 m |
+| Barrier | 1.0 m |
+
+---
+
+## Contact
+
+**Bhavya Dashottar**  
+7976047375
+bhavyadashottar18@gmail.com
